@@ -19,6 +19,32 @@
 -->
 ## Upcoming Release
 
+## Version 4.0.0
+* Updated Az.Batch to use `Microsoft.Azure.Batch` SDK version 15.1.0
+  - Add ability to assign user-assigned managed identities to `PSCloudPool`. These identities will be made available on each node in the pool, and can be used to access various resources.
+  - Added `IdentityReference` property to the following models to support accessing resources via managed identity:
+    - `PSAzureBlobFileSystemConfiguration`
+    - `PSOutputFileBlobContainerDestination`
+    - `PSContainerRegistry`
+    - `PSResourceFile`
+    - `PSUploadBatchServiceLogsConfiguration`
+##  - Added new `ComputeNodeExtension` operations to `BatchServiceClient` for getting/listing VM extensions on a node
+  - Added new `extensions` property to `PSVirtualMachineConfiguration` on `PSCloudPool` to specify virtual machine extensions for nodes
+  - Added the ability to specify availability zones using a new property `NodePlacementConfiguration` on `VirtualMachineConfiguration`
+  - Added new `OSDisk` property to `VirtualMachineConfiguration`, which contains settings for the operating system disk of the Virtual Machine.
+    - The `Placement` property on `PSDiffDiskSettings` specifies the ephemeral disk placement for operating system disks for all VMs in the pool. Setting it to "CacheDisk" will store the ephemeral OS disk on the VM cache.
+  - Added `MaxParallelTasks` property on `PSCloudJob` to control the maximum allowed tasks per job (defaults to -1, meaning unlimited).
+  - Added `VirtualMachineInfo` property on `PSComputeNode` which contains information about the current state of the virtual machine, including the exact version of the marketplace image the VM is using.
+  - Added `RecurrenceInterval` property to `PSSchedule` to control the interval between the start times of two successive job under a job schedule.
+* Updated Az.Batch`Microsoft.Azure.Management.Batch` SDK version 14.0.0.
+##  - Added two new properties on accounts which enable auto-storage to use a managed identity for authentication rather than a shared key:
+##    - Setting `AutoStorageAuthenticationMode` to "BatchAccountManagedIdentity" will use the identity on the account for storage management operations such as blob container creation/deletion.
+##    - Setting `IdentityReference` will specify the identity which can be used on compute nodes to access auto-storage. Note that this identity *must* be assigned to each pool individually.
+##  - Added `AllowedAuthenticationModes` property on `BatchAccount` to list the allowed authentication modes for a given account that can be used to authenticate with the data plane. This does not affect authentication with the control plane.
+##  - Added a new `ListSupportedVirtualMachineSkus` operation, which gets the list of Batch-supported Virtual Machine VM sizes available at a given location.
+##  - Added a new `ListOutboundNetworkDependenciesEndpoints` operation, which lists the endpoints that a Batch Compute Node under a Batch Account may call as part of Batch service administration.
+##    - [https://docs.microsoft.com/en-us/azure/batch/batch-virtual-network](More information about creating a pool inside of a virtual network.)
+
 ## Version 3.1.0
 * Updated Az.Batch to use `Microsoft.Azure.Management.Batch` SDK version to 11.0.0
 * Added the ability to set the BatchAccount Identity in the `New-AzBatchAccount` cmdlet
