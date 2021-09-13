@@ -6,6 +6,7 @@
 namespace Microsoft.Azure.PowerShell.Cmdlets.Databricks.Cmdlets
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.Databricks.Runtime.Extensions;
+    using System;
 
     /// <summary>Lists the workspace vNet Peerings.</summary>
     /// <remarks>
@@ -221,7 +222,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.Databricks.Cmdlets
                     case Microsoft.Azure.PowerShell.Cmdlets.Databricks.Runtime.Events.Information:
                     {
                         var data = messageData();
-                        WriteInformation(data, new[] { data.Message });
+                        WriteInformation(data.Message, new string[]{});
                         return ;
                     }
                     case Microsoft.Azure.PowerShell.Cmdlets.Databricks.Runtime.Events.Debug:

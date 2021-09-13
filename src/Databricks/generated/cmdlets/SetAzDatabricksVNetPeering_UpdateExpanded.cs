@@ -6,6 +6,7 @@
 namespace Microsoft.Azure.PowerShell.Cmdlets.Databricks.Cmdlets
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.Databricks.Runtime.Extensions;
+    using System;
 
     /// <summary>Creates vNet Peering for workspace.</summary>
     /// <remarks>
