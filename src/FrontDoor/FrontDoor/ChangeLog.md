@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 1.9.0
 * New-AzFrontDoorRulesEngineActionObject: Allow rule engine action creation without RouteConfigurationOverride 
 * New-AzFrontDoorRulesEngineActionObject: Fix DynamicCompression parameter being ignored issue
 
