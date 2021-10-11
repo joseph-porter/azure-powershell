@@ -284,15 +284,9 @@ param(
     [Parameter()]
     [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Category('Body')]
     [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Runtime.Info(PossibleTypes=([Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20210701.ILogAnalyticsWorkspaceResourceId]))]
-    [System.Collections.Hashtable]
+    [System.String]
     # The workspace resource id for log analytics
     ${LogAnalyticWorkspaceResourceId},
-
-    [Parameter()]
-    [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Category('Body')]
-    [System.String]
-    # The identifier for a network profile.
-    ${NetworkProfileId},
 
     [Parameter()]
     [ArgumentCompleter([Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Support.ContainerGroupRestartPolicy])]
