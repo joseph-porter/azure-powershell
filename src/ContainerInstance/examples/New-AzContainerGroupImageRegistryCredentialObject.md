@@ -1,11 +1,18 @@
-### Example 1: Set up an image registry credential to create a container group
+### Example 1: {{ Add title here }}
 ```powershell
-PS C:\> New-AzContainerGroupImageRegistryCredentialObject -Server "myserver.com" -Username "username" -Password (ConvertTo-SecureString "******" -AsPlainText -Force) 
+PS C:\> {{ Add code here }}
 
-
-Password          Server       Username
---------          ------       --------
-****** myserver.com username
+{{ Add output here }}
 ```
 
-This command sets up an image registry credential to create a container group
+{{ Add description here }}
+
+### Example 2: {{ Add title here }}
+```powershell
+PS C:\> {{ Add code here }}
+
+{{ Add output here }}
+```
+
+{{ Add description here }}
+

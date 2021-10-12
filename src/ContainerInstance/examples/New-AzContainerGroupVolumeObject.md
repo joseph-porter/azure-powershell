@@ -1,12 +1,18 @@
-### Example 1: Create a Azure File volume
+### Example 1: {{ Add title here }}
 ```powershell
-PS C:\> New-AzContainerGroupVolumeObject -Name "myvolume" -AzureFileShareName "myshare" -AzureFileStorageAccountName "username" -AzureFileStorageAccountKey (ConvertTo-SecureString "******" -AsPlainText -Force)
+PS C:\> {{ Add code here }}
 
-******
-
-Name
-----
-myvolume
+{{ Add output here }}
 ```
 
-This command creates a Azure File volume.
+{{ Add description here }}
+
+### Example 2: {{ Add title here }}
+```powershell
+PS C:\> {{ Add code here }}
+
+{{ Add output here }}
+```
+
+{{ Add description here }}
+

@@ -1,10 +1,18 @@
-### Example 1: Set up the init container definition
+### Example 1: {{ Add title here }}
 ```powershell
-PS C:\> New-AzContainerInstanceInitDefinitionObject -Name "initDefinition" -Command "/bin/sh -c myscript.sh"
+PS C:\> {{ Add code here }}
 
-Name
-----
-initDefinition
+{{ Add output here }}
 ```
 
-This command sets up the init container definition with command `/bin/sh -c myscript.sh`
+{{ Add description here }}
+
+### Example 2: {{ Add title here }}
+```powershell
+PS C:\> {{ Add code here }}
+
+{{ Add output here }}
+```
+
+{{ Add description here }}
+

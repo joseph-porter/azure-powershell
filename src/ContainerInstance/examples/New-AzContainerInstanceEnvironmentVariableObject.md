@@ -1,23 +1,18 @@
-### Example 1: Create an environment variable within a container instance
+### Example 1: {{ Add title here }}
 ```powershell
 PS C:\> {{ Add code here }}
 
-New-AzContainerInstanceEnvironmentVariableObject -Name "env1" -Value "value1"
-
-Name SecureValue Value
----- ----------- -----
-env1             value1
+{{ Add output here }}
 ```
 
-This command creates an environment variable within a container instance.
+{{ Add description here }}
 
-### Example 2: Create a secure environment variable within a container instance
+### Example 2: {{ Add title here }}
 ```powershell
-PS C:\> New-AzContainerInstanceEnvironmentVariableObject -Name "env2" -SecureValue (ConvertTo-SecureString -String "******" -AsPlainText -Force)
+PS C:\> {{ Add code here }}
 
-Name SecureValue Value
----- ----------- -----
-env2 ******
+{{ Add output here }}
 ```
 
-This command creates a secure environment variable within a container instance
+{{ Add description here }}
+

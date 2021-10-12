@@ -283,7 +283,7 @@ param(
 
     [Parameter()]
     [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Category('Body')]
-    [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Runtime.Info(PossibleTypes=([Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20210701.ILogAnalyticsWorkspaceResourceId]))]
+    [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Category('Body')]
     [System.String]
     # The workspace resource id for log analytics
     ${LogAnalyticWorkspaceResourceId},
@@ -401,7 +401,6 @@ process {
         }
         $null = $PSBoundParameters["IdentityUserAssignedIdentity"] = $IdentityUserAssignedIdentityHashTable
       }
-      
       Az.ContainerInstance.internal\New-AzContainerGroup @PSBoundParameters
     } catch {
         throw

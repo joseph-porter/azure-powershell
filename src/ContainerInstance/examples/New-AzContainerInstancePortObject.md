@@ -1,10 +1,18 @@
-### Example 1: Specify port 8000 exposed on a container instance with TCP protocol
+### Example 1: {{ Add title here }}
 ```powershell
-PS C:\> New-AzContainerInstancePortObject -Port 8000 -Protocol TCP
+PS C:\> {{ Add code here }}
 
-Port Protocol
------ --------
-8000  TCP
-```           
+{{ Add output here }}
+```
 
-This command specifies port 8000 exposed on the container instance with TCP protocol.
+{{ Add description here }}
+
+### Example 2: {{ Add title here }}
+```powershell
+PS C:\> {{ Add code here }}
+
+{{ Add output here }}
+```
+
+{{ Add description here }}
+

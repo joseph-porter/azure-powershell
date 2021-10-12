@@ -1,13 +1,11 @@
-### Example 1: Create a container instance using image alphine with request cpu 1.0 and request memory 1.5Gb
+### Example 1: {{ Add title here }}
 ```powershell
-PS C:\> New-AzContainerInstanceObject -Name "test-container" -Image alpine -RequestCpu 1 -RequestMemoryInGb 1.5
+PS C:\> {{ Add code here }}
 
-Name
-----
-test-container
+{{ Add output here }}
 ```
 
-Create a container instance using image alphine with request cpu 1.0 and request memory 1.5Gb
+{{ Add description here }}
 
 ### Example 2: {{ Add title here }}
 ```powershell
