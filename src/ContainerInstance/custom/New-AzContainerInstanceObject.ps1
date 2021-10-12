@@ -57,12 +57,17 @@ function New-AzContainerInstanceObject {
         [Parameter(HelpMessage="The failure threshold.")]
         [int]
         $LivenessProbeFailureThreshold,
+        <#
         [Parameter(HelpMessage="The header name.")]
         [string]
         $LivenessProbeHttpGetHttpHeadersName,
         [Parameter(HelpMessage="The header value.")]
         [string]
         $LivenessProbeHttpGetHttpHeadersValue,
+        #>
+        [Parameter(HelpMessage="The HTTP headers for liveness probe.")]
+        [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20210701.IHttpHeader[]]
+        $LivenessProbeHttpGetHttpHeader,
         [Parameter(HelpMessage="The path to probe.")]
         [string]
         $LivenessProbeHttpGetPath,
@@ -97,12 +102,17 @@ function New-AzContainerInstanceObject {
         [Parameter(HelpMessage="The failure threshold.")]
         [int]
         $ReadinessProbeFailureThreshold,
+        <#
         [Parameter(HelpMessage="The header name.")]
         [string]
         $ReadinessProbeHttpGetHttpHeadersName,
         [Parameter(HelpMessage="The header value.")]
         [string]
         $ReadinessProbeHttpGetHttpHeadersValue,
+        #>
+        [Parameter(HelpMessage="The HTTP headers for readiness probe.")]
+        [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20210701.IHttpHeader[]]
+        $ReadinessProbeHttpGetHttpHeader,
         [Parameter(HelpMessage="The path to probe.")]
         [string]
         $ReadinessProbeHttpGetPath,
@@ -155,8 +165,7 @@ function New-AzContainerInstanceObject {
         $Object.LimitsGpuSku = $LimitsGpuSku
         $Object.LivenessProbeExecCommand = $LivenessProbeExecCommand
         $Object.LivenessProbeFailureThreshold = $LivenessProbeFailureThreshold
-        $Object.LivenessProbeHttpGetHttpHeadersName = $LivenessProbeHttpGetHttpHeadersName
-        $Object.LivenessProbeHttpGetHttpHeadersValue = $LivenessProbeHttpGetHttpHeadersValue
+        $Object.LivenessProbeHttpGetHttpHeader = $LivenessProbeHttpGetHttpHeader
         $Object.LivenessProbeHttpGetPath = $LivenessProbeHttpGetPath
         $Object.LivenessProbeHttpGetPort = $LivenessProbeHttpGetPort
         $Object.LivenessProbeHttpGetScheme = $LivenessProbeHttpGetScheme
@@ -172,8 +181,7 @@ function New-AzContainerInstanceObject {
         $Object.Port = $Port
         $Object.ReadinessProbeExecCommand = $ReadinessProbeExecCommand
         $Object.ReadinessProbeFailureThreshold = $ReadinessProbeFailureThreshold
-        $Object.ReadinessProbeHttpGetHttpHeadersName = $ReadinessProbeHttpGetHttpHeadersName
-        $Object.ReadinessProbeHttpGetHttpHeadersValue = $ReadinessProbeHttpGetHttpHeadersValue
+        $Object.ReadinessProbeHttpGetHttpHeader = $ReadinessProbeHttpGetHttpHeader
         $Object.ReadinessProbeHttpGetPath = $ReadinessProbeHttpGetPath
         $Object.ReadinessProbeHttpGetPort = $ReadinessProbeHttpGetPort
         $Object.ReadinessProbeHttpGetScheme = $ReadinessProbeHttpGetScheme

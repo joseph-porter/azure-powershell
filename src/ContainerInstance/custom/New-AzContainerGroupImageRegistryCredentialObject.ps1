@@ -35,9 +35,12 @@ function New-AzContainerGroupImageRegistryCredentialObject {
         [Parameter(Mandatory, HelpMessage="The Docker image registry server without a protocol such as `"http`" and `"https`".")]
         [string]
         $Server,
-        [Parameter(Mandatory, HelpMessage="The username for the private registry.")]
+        [Parameter(HelpMessage="The username for the private registry.")]
         [string]
-        $Username
+        $Username,
+        [Parameter(HelpMessage="The identity with access to the ACR.")]
+        [string]
+        $AcrIdentity
     )
 
     process {
@@ -48,6 +51,7 @@ function New-AzContainerGroupImageRegistryCredentialObject {
         $Object.Password = $psTxt
         $Object.Server = $Server
         $Object.Username = $Username
+        $Object.Identity = $AcrIdentity
         return $Object
     }
 }

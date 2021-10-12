@@ -82,8 +82,9 @@ CONTAINER <IContainer[]>: The containers within the container group.
 
 IMAGEREGISTRYCREDENTIALS <IImageRegistryCredential[]>: The image registry credentials by which the container group is created from.
   Server <String>: The Docker image registry server without a protocol such as "http" and "https".
-  Username <String>: The username for the private registry.
+  [Username <String>]: The username for the private registry.
   [Password <String>]: The password for the private registry.
+  [AcrIdentity <String>]: The identity with access to the ACR.
 
 INITCONTAINER <IInitContainerDefinition[]>: The init containers for a container group.
   Name <String>: The name for the init container.
