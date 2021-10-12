@@ -284,7 +284,6 @@ param(
 
     [Parameter()]
     [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Category('Body')]
-    [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Category('Body')]
     [System.String]
     # The workspace resource id for log analytics
     ${LogAnalyticWorkspaceResourceId},
@@ -303,6 +302,12 @@ param(
     [System.String]
     # The SKU for a container group.
     ${Sku},
+
+    [Parameter()]
+    [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Category('Body')]
+    [System.String]
+    # The subnet for the container group.
+    ${Subnet},
 
     [Parameter()]
     [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Category('Body')]
@@ -402,6 +407,14 @@ process {
         }
         $null = $PSBoundParameters["IdentityUserAssignedIdentity"] = $IdentityUserAssignedIdentityHashTable
       }
+
+      if($PSBoundParameters.ContainsKey("Subnet")){
+        $SubnetObject = [Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20210701.ContainerGroupSubnetId]::New()
+        $SubnetObject.Id = $Subnet
+        $null = $PSBoundParameters.Add("SubnetId", $SubnetObject)
+        $null = $PSBoundParameters.Remove("Subnet")
+      }
+
       Az.ContainerInstance.internal\New-AzContainerGroup @PSBoundParameters
     } catch {
         throw
