@@ -1,13 +1,13 @@
 {
-  "Get-AzContainerInstanceCapability+[NoContext]+List+$GET+https://management.azure.com/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/providers/Microsoft.ContainerInstance/locations/eastus/capabilities?api-version=2021-03-01+1": {
+  "Get-AzContainerInstanceCapability+[NoContext]+List+$GET+https://management.azure.com/subscriptions/da28f5e5-aa45-46fe-90c8-053ca49ab4b5/providers/Microsoft.ContainerInstance/locations/eastus/capabilities?api-version=2021-07-01+1": {
     "Request": {
       "Method": "GET",
-      "RequestUri": "https://management.azure.com/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/providers/Microsoft.ContainerInstance/locations/eastus/capabilities?api-version=2021-03-01",
+      "RequestUri": "https://management.azure.com/subscriptions/da28f5e5-aa45-46fe-90c8-053ca49ab4b5/providers/Microsoft.ContainerInstance/locations/eastus/capabilities?api-version=2021-07-01",
       "Content": null,
       "isContentBase64": false,
       "Headers": {
-        "x-ms-unique-id": [ "18" ],
-        "x-ms-client-request-id": [ "40293ff9-93e9-4acf-862f-b90c264b915b" ],
+        "x-ms-unique-id": [ "19" ],
+        "x-ms-client-request-id": [ "0a874a5f-6eb3-4381-812c-dfe4ff8a07c2" ],
         "CommandName": [ "Get-AzContainerInstanceCapability" ],
         "FullCommandName": [ "Get-AzContainerInstanceCapability_List" ],
         "ParameterSetName": [ "__AllParameterSets" ],
@@ -23,13 +23,13 @@
         "Cache-Control": [ "no-cache" ],
         "Pragma": [ "no-cache" ],
         "Vary": [ "Accept-Encoding" ],
-        "x-ms-request-id": [ "eastus:bf6d3596-6627-42c1-9624-bf04751f195f" ],
-        "x-ms-ratelimit-remaining-subscription-reads": [ "11988" ],
-        "x-ms-correlation-request-id": [ "457a6487-8a80-436c-94c0-45733dd1b0d7" ],
-        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20210511T063202Z:457a6487-8a80-436c-94c0-45733dd1b0d7" ],
+        "x-ms-request-id": [ "eastus:194ee204-6898-4d60-976c-5b21838aa849" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11985" ],
+        "x-ms-correlation-request-id": [ "bceb3a23-22bb-4a38-9f07-b101980cdbf7" ],
+        "x-ms-routing-request-id": [ "WESTCENTRALUS:20211012T232757Z:bceb3a23-22bb-4a38-9f07-b101980cdbf7" ],
         "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
         "X-Content-Type-Options": [ "nosniff" ],
-        "Date": [ "Tue, 11 May 2021 06:32:01 GMT" ]
+        "Date": [ "Tue, 12 Oct 2021 23:27:56 GMT" ]
       },
       "ContentHeaders": {
         "Content-Length": [ "1452" ],
